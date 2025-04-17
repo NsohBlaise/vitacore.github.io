@@ -1,0 +1,788 @@
+:root {
+    --main-color: rgb(0, 180, 165);
+    --black: black;
+    --white: white;
+    --bg: rgb(189, 0, 164);
+    --light-black: rgb(0, 41, 117);
+    --primary: linear-gradient(to right, rgb(255, 241, 194), rgb(255, 228, 137));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 3em;
+
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    border: .1rem solid var(--main-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    font-weight: bolder;
+    background: var(--white);
+    border-radius: 20%;
+    margin-bottom: 1rem;
+    width: 20rem;
+}
+.shen {
+    margin-top: 2.5rem;
+}
+.kane {
+    color: var(--main-color);
+}
+.btn:hover {
+    background: var(--black);
+    color: var(--bg);
+    border: 2px solid var(--primary);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--primary);
+    box-shadow: 0 .5rem .5rem rgba(2, 25, 88, 0.616);
+    opacity: 100;
+}
+
+.header .logo {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+#menu {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--main-color);
+    display: none;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(foods.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home .content {
+    max-width: 60rem;
+    text-align: center;
+}
+.home .content h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-bottom: 3rem;
+    margin-top: 0;
+   transform: translateY(25%);
+}
+.circles {
+    height: 30vh;
+    width: 10vw;
+    object-fit: cover;
+    border: 1rem solid var( --primary);
+    border-radius: 0 5rem 0 5rem;
+    opacity: 0.8;
+}
+.left {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+.hero-media {
+    flex: 0 0 45%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .hero-media video {
+    width: 70%;
+    height: 20%;
+    border-radius: 10%;
+    box-shadow: 0 4px 10px rgb(255, 253, 253);
+    margin-top: 2rem;
+  }
+  .hero-media video:hover {
+    transform: scale(1.01);
+  }
+.right {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.4rem;
+    color: var(--black);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: var(--light-black);
+    padding: 2rem 0;
+    display: inline-block;
+    line-height: 2;
+}
+
+.about .row .image {
+    flex: 1 1 40rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .image img:hover {
+    transform: scale(1.009);
+}
+.about .image figcaption {
+    margin: 1rem;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+}
+
+.services {
+    background: var(--bg);
+}
+.btnt:hover {
+    background: rgb(7, 179, 1) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 8rem;
+}
+
+.services .box-container .box {
+    text-align: center;
+    padding: 3rem;
+    background: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+    border: .2rem solid var(--main-color);
+}
+
+.services .box-container .box:hover,
+.services .box-container .box:hover .icon {
+    transform: scale(1.01);
+    background: var(--primary);
+}
+
+.services .box-container .box .icon {
+    width: 13rem;
+    height: 13rem;
+    line-height: 13rem;
+    background: var(--white);
+    border-radius: 50%;
+    margin: -11rem auto 2rem;
+    border: 1.8rem solid var(--bg);
+}
+
+.services .box-container .box .icon img {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+.services .box-container .box .content h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+.services .box-container .box .content .line {
+    background: var(--main-color);
+    width: 30%;
+    height: .4rem;
+    margin: 2rem auto;
+    border-radius: 5rem;
+}
+
+.services .box-container .box .content p {
+    font-size: 1.4rem;
+    columns: var(--black);
+    line-height: 2;
+}
+
+.services .box-container .box .content ul {
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.services .box-container .box .content ul li {
+    padding: .5rem;
+    font-size: 1.4rem;
+    columns: var(--black);
+    display: inline-block;
+}
+
+.services .box-container .box .content ul li img {
+    display: inline-block;
+    padding: .5rem;
+    margin-right: 1rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.diet .controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.diet .controls .buttons {
+    padding: 3rem 2rem;
+    background: var(--white);
+    cursor: pointer;
+    margin-bottom: 3rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: .5rem .5rem 1rem rgb(22, 0, 82);
+}
+.diet .controls .buttons:hover {
+    background: black;
+    box-shadow: .5rem .5rem 1rem rgb(0, 16, 61);
+}
+.diet .controls .buttons:hover h3 {
+    color: white;
+}
+.diet .controls .buttons:hover img {
+    transform: rotate(360deg);
+}
+
+.diet .controls .buttons img {
+    height: 10rem;
+}
+
+.diet .controls .buttons h3 {
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: var(--light-black);
+}
+
+.diet .controls .buttons.active {
+    background: rgb(206, 93, 255);
+}
+
+.diet .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.diet .image-container .box {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.diet .image-container .box :hover {
+    transform: scale(1.09);
+}
+
+.diet .image-container .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.diet .image-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.diet .image-container .box .content {
+    padding: 2rem;
+}
+
+.diet .image-container .box .content .link {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.diet .image-container .box .content p {
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: var(--light-black);
+    line-height: 2;
+}
+
+.diet .image-container .box .content .icon {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diet .image-container .box .content .icon a {
+    font-size: 1.4rem;
+    color: var(--light-black);
+}
+
+.diet .image-container .box .content .icon a:hover {
+    color: var(--main-color);
+}
+
+.diet .image-container .box .content .icon a img {
+    padding-right: .5rem;
+    color: var(--main-color);
+}
+
+.diet .image-container .box:hover {
+    background: var(--primary);
+}
+
+.pricing {
+    background: var(--black);
+    padding-bottom: 8rem;
+}
+
+.pricing .box-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    padding-top: 5rem;
+}
+.pricing .box-container .box {
+    height: 52rem;
+    width: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: var(--white);
+    
+}
+.pricing .box-container .active {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+.pricing .box-container .box .title {
+    margin: 3rem 0;
+    font-size: 2.2rem;
+    color: var(--light-black);
+    text-transform: uppercase;
+}
+.pricing .box-container .box .price {
+    color: var(--main-color);
+    margin-bottom: 5rem;
+}
+.pricing .box-container .box .price .currency {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    font-weight: 300;
+}
+.pricing .box-container .box .price .amount {
+    font-size: 5.8rem;
+    line-height: 4.4rem;
+    font-weight: 700;
+}
+.pricing .box-container .box .price .duration {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+}
+.pricing .box-container .box ul {
+    margin: 0 auto 2.5rem;
+}
+.pricing .box-container .box ul li {
+    text-align: center;
+    font-size: 1.6rem;
+    padding-left: 3rem;
+    margin: 1rem auto;
+    color: var(--light-black);
+}
+.pricing .box-container .box ul li img {
+    color: var(--main-color);
+    padding: 0 1rem;
+    height: 3rem;
+}
+.pricing .box-container .box p {
+    font-size: 1.4rem;
+    color: var(--light-black);
+    margin: 2rem auto;
+    text-align: left;
+    padding-left: 3.8rem;
+}
+.reviews .slide p {
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    background: var(--primary);
+    border-radius: .5rem;
+    color: var(--black);
+    line-height: 2;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 3rem;
+}
+.reviews .slide p::before {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: .7rem;
+    height: 3rem;
+    width: 3rem;
+    background: var(--light-black);
+    transform: rotate(45deg);
+}
+.reviews .slide .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.reviews .slide .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+.reviews .slide .user h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+.reviews .slide .user span {
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+.newsletter {
+    background: url(rajun.avif) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.newsletter .content {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+.newsletter .content p {
+    font-size: 3rem;
+    line-height: 2;
+    color: var(--white);
+}
+.newsletter .content form {
+    margin-top: 2rem;
+    background: var(--light-black);
+    border-radius: 10%;
+    border: .5rem solid var(--main-color);
+    padding: .8rem;
+    display: flex;
+    border: 1px solid var(--black);
+}
+.newsletter .content form .email {
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    padding: 1 1.3rem;
+    text-transform: capitalize;
+    height: 5.5rem;
+}
+.newsletter .content form .btn {
+    margin-top: 0;
+    background: none;
+}
+.newsletter .content form .btn:hover {
+    background: var(--main-color);
+    color: var(--light-black);
+}
+.tabular {
+    background: linear-gradient(rgb(225, 0, 255), rgb(97, 94, 255));
+    font-family: serif;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.tabular .table-container {
+    padding: 1rem;
+    margin: 2rem;
+}
+.tabular .heading {
+    font-size: 3.7rem;
+    text-align: center;
+    color: rgb(0, 114, 70);
+    margin-bottom: 2rem;
+    font-family: cursive;
+    font-weight: bold;
+    text-shadow: .4rem .4rem .2rem rgb(169, 206, 255);
+}
+.tabular .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabular .table thead {
+    background: rgb(0, 21, 116);
+
+}
+.tabular .table thead tr th {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: .3rem;
+    color: white;
+    opacity: 1;
+    padding: 2rem;
+    vertical-align: top;
+    border: 1px solid rgb(255, 3, 255);
+} 
+.tabular .table tr td {
+    font-size: 1.9rem;
+    letter-spacing: 1;
+    font-weight: bolder;
+    color: darkblue;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+
+
+}
+.table-container p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: bolder;
+    font-family: cursive;
+    margin: 1.4rem;
+}
+.table .text-open {
+    font-size: larger;
+    font-weight: 600;
+    font-family: cursive;
+    letter-spacing: .3;
+    color: rgb(255, 166, 0);
+
+}
+.table .btnt {
+    width: 100%;
+    display: inline-block;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    opacity: 2;
+    line-height: 1.3;
+    background: rgb(255, 244, 149);
+    border-radius: .8rem;
+    padding: 1.5rem;
+    
+}
+.remedi {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 2.6rem;
+    margin: 1.3rem;
+}
+.freds {
+    margin: .4rem;
+    color: rgb(100, 7, 7);
+    font-size: 2rem;
+    font-family: serif;
+    font-weight: bold;
+}
+.mafdia td {
+    background: black !important;
+    color: white !important;
+    border-right: 1px solid rgb(255, 255, 255) !important;
+}
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    gap: 1rem;
+}
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: var(--main-color);
+}
+.footer .box-container .box  a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-black);
+    padding: 1rem 0;
+}
+.footer .box-container .box img {
+    color: var(--main-color);
+    padding-right: .5rem;
+}
+.footer .box-container .box a:hover img {
+    padding-right: 2rem;
+    color: var(--black);
+}
+.footer .credit {
+    text-align: left;
+    margin-top: 2.5rem;
+    padding: 1.2rem;
+    padding-top: 2.5rem;
+    font-size: 5rem;
+    color: var(--light-black);
+}
+.footer .credit span {
+    color: var(--main-color);
+}
+@media(max-width:991px) {
+   html {
+    font-size: 55%;
+   }
+   .header {
+    padding: 2rem 3rem;
+   }
+   .section {
+    padding: 3rem 5rem;
+   }
+}
+@media(max-width:500px) {
+    html {
+        font-size: 50%;
+    }
+    .newsletter .content {
+        max-width: 100%;
+    }
+    .header .navbar a {
+        display: block;
+    }
+}
+@media(max-width:768px) {
+    #menu { display: inline-block;}
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        border-top: .1rem solid rgb(0, 126, 94);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        color: var(--light-black);
+    }
+    .table thead {
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    .table tr {
+        margin-bottom: 2rem;
+    }
+    .table tbody tr td {
+        text-align: right !important;
+        padding-left: 50%;
+
+    }
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 4%;
+        font-weight: 600;
+        font-size: 2.4rem;
+        padding-right: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
