@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    background-position: center;
+    background-size: cover;
+   
+}
+:root {
+    --bodyBg: rgb(152, 0, 240);
+    --formbg: rgb(6, 208, 223);
+    --textColor: black;
+    --paraColor: rgb(255, 102, 0); 
+    
+}
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: rgb(78, 0, 114)
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: rgb(0, 165, 151);
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 2%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+    margin-bottom: 5rem;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: rgb(4, 245, 225);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  ul, li, a {
+    background: white;
+  }
+  .nav-links li a:hover {
+    color: rgb(255, 0, 170);
+  }
+  
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: rgb(0, 172, 149);
+    text-transform: uppercase;
+    font-size: large;
+  }
+  
+  button {
+    padding: 5px 50px;
+    background-color: rgb(255, 0, 255);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-radius: 0.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(228, 187, 100);
+  }
+  
+  .nav-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+  }
+.header {
+    text-align: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: teal;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.cta {
+    margin-right: 3rem;
+}
+.header span {
+    color: rgb(255, 0, 242);
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-underline-offset: 0.1em;
+}
+body {
+    background-image: url(backer1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--bodyBg);
+    padding-bottom: 5em;
+    
+}
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 2em;
+
+}
+.sectionHeader {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: xx-large;
+    color: var(--paraColor);
+    margin-bottom: .5em;
+    margin-top: 4rem !important;
+    font: 220% "pristina", cursive;
+}
+.eru {
+    margin: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+    font-family: cursive;
+}
+dialog {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background: url(doctorate1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    height: 30rem;
+    width: 40rem;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1000;
+
+}
+p.info {
+    margin: 2rem;
+    color: darkblue;
+    font-family: cursive;
+    font-size: 2rem;
+}
+.method p {
+    font-weight: 900;
+    color: orangered;
+}
+.heading,
+.sub-heading {
+margin-bottom: .5em;
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.sub-heading {
+    text-align: left;
+}
+.contactForm {
+    display: grid;
+    gap: 0.9em;
+    margin-top: 3em;
+
+}
+.para {
+    color: var(--textColor);
+    font-size: x-large;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.para2 {
+    text-align: left;
+}
+form {
+    width: 90%;
+
+}
+.input {
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: 1rem;
+    padding: 1em;
+    outline: none;
+    margin-bottom: 1em;
+    background-color: var(--textColor);
+    color: white;
+    border-radius: 1em;
+    border: 3px solid rgb(153, 0, 255);
+}
+.input:focus {
+    border: 2px solid rgb(255, 72, 0);
+}
+.input::placeholder {
+    text-transform: capitalize;
+    color: rgb(0, 131, 245);
+}
+.submit {
+    background-color: #fdfdfd;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+    width: 100%;
+}
+.submit:hover {
+    color: rgb(255, 115, 0);
+    background: var(--textColor);
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.mapBg {
+    position: absolute;
+    background-color: var(--textColor);
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 90%;
+    border-radius: 1.5rem;
+}
+.map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    background-color: #fdfdfd;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+}
+.contactMethod {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+}
+.method {
+    display: flex;
+    align-items: center;
+}
+.contactIcon {
+    font-size: 2rem;
+    color: var(--formbg);
+    display: flex;
+    width: 1em;
+}
+.crime {
+    display: flex;
+    padding: 2em;
+    gap: 2em;
+}
+@media screen and (min-width:800px) {
+    section {
+        max-width: 1100px;
+    }
+    .contactForm {
+        grid-template-columns: 1fr 1fr;
+    }
+    .crime {
+        max-width: 1100px;
+    }
+}
+.contactMethod {
+    display: flex;
+}
+
+
+
+
+.crime {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    gap: 1.5em; 
+}
+
+.contactMethod {
+    flex: 1 1 300px; 
+    max-width: 500px; 
+    box-sizing: border-box;
+}
+
+.contactIcon {
+    font-size: 2rem;
+    color: var(--formbg);
+    flex-shrink: 0;
+    max-width: 50px; 
+    width: 100%;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    gap: 1em; 
+    flex-wrap: wrap; 
+}
+@media screen and (max-width: 600px) {
+    .crime {
+        flex-direction: column; 
+        gap: 0.01em;
+    }
+
+    .method {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactIcon {
+        max-width: 50px;
+    }
+}

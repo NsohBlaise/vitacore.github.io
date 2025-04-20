@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(18, 19, 19);
+}
+
+.about_container {
+    width: 100%;
+    padding: 50px 8%;
+}
+
+.imageSection {
+    grid-area: imageSect;
+}
+
+.infoSection {
+    grid-area: infoSect;
+}
+
+.skillSection {
+    grid-area: skillSect;
+}
+
+.about_container .about_contents {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+    grid-template-areas: 'imageSect infoSect'
+        'skillSect skillSect';
+}
+
+.imageSection {
+    position: relative;
+    min-width: 300px;
+    height: 380px;
+}
+
+.imageSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.about_contents .imageSection::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid rgb(5, 218, 129);
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+.infoSection h1 {
+    color: orangered;
+    font-size: 30px;
+    font-family: helvetica;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.infoSection h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: rgb(255, 0, 200);
+}
+
+.infoSection h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0px;
+    background-color: aqua;
+}
+
+.infoSection h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: aliceblue;
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.infoSection p {
+    color: rgb(14, 218, 167);
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+}
+
+.personalInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(2, 153, 90);
+}
+
+.personalInfo div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.personalInfo div span {
+    color: rgb(192, 5, 167);
+    letter-spacing: 1px;
+}
+
+.infoSection button {
+    min-width: 150px;
+    padding: 8px 18px;
+    border: 1px solid blue;
+    border-radius: 10%;
+    font-size: 1.5em;
+    background-color: rgb(8, 248, 136);
+    color: rgb(20, 20, 20);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 20px;
+}
+
+.infoSection button:hover {
+    color: rgb(7, 247, 167);
+    background-color: aliceblue;
+}
+
+.skillSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 80px;
+}
+
+.skillSection .subject {
+    font-size: 17px;
+    font-weight: thin;
+    color: antiquewhite;
+    padding-bottom: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background-color: rgb(231, 7, 220);
+    padding: 4px 6px;
+    border-top: 1px solid blueviolet;
+    border-bottom: 1px solid blueviolet;
+    border-radius: 20%;
+}
+
+.progress_line {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 236, 185);
+    box-shadow: -1px -1px 2px rgb(233, 24, 139),
+        1px 1px 2px rgb(58, 247, 143);
+    border-radius: 30%;
+
+}
+
+.progress_line::after {
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0px;
+    transform: translateX(-50%);
+    color: rgb(0, 255, 213);
+    font-size: 1.5em;
+}
+
+@media(max-width: 1068px) {
+    .about_container .about_contents {
+        grid-template-areas: 'imageSect skillSect'
+            'infoSect infoSect';
+    }
+
+    .skillSection {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+@media(max-width: 868px) {
+    .about_container .about_contents {
+        grid-template-areas: 'imageSect imageSect'
+            'infoSect infoSect'
+            'skillSect skillSect';
+    }
+
+}
+
+@media(max-width: 668px) {
+    .personalInfo {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us - VitaCore&#x1F4A1;</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="contact-style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="logoh.jpg" alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="skills.html#potat"><button>View My CV</button></a>
+    </header>
+    <main>
+        <section>
+            <h3 class="sectionHeader"><img src="icons8-star.gif" style="color: rgb(255, 0, 242);">CONTACT US
+            <img
+                    src="icons8-star.gif"></h3>
+            <h1 class="heading"><canvas style="z-index: 1000;" width="300" height="100" id="canvas">GET IN TOUCH!</canvas>
+                </h1>
+            <p class="para">
+                Welcome to our Contact Page! We're here to provide exceptional support and answer any questions you may
+                have. Whether you're reaching out for assistance, feedback, or inquiries, we value every interaction and
+                look forward to connecting with you. Let's get in touch!
+            </p>
+            <div class="shower">
+                <button id="show">Tell Us Something</button>
+                <p id="info"></p>
+                <br>
+                <dialog id="dlog">
+                    <h2 class="eru">Do You Envy Our Work?</h1>
+                     <img src="icons8-carrot (1).gif" style="align-items: center; margin-left: 19rem; margin: 4rem;" height="50" width="50" alt="">
+                    
+                    <br>
+                    <button id="cncl">Yes</button>
+                    <button id="conf">No</button>
+                </dialog>
+            </div>
+            <div class="contactForm">
+                <form action="#">
+                    <h1 class="sub-heading">Need Support?</h1>
+                    <p class="para para2">Kindly Fill the boxes below</p>
+                    <input type="text" class="input" placeholder="Enter Your Name" required>
+                    <input type="email" class="input" placeholder="Enter Your Email" required>
+                    <input type="text" class="input" placeholder="Enter Your Subject" required>
+                    <textarea class="input" cols="30" rows="5" placeholder="Type your message"></textarea>
+                    <input type="submit" class="input submit" value="SUBMIT">
+                </form>
+                <div class="map-container">
+                    <div class="mapBg"></div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.686381095212!2d9.346398073533926!3d4.084127646697053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061373eda0f7beb%3A0x7b0967783aec1c5d!2sTiko%2Cgolf%20club!5e0!3m2!1sen!2scm!4v1741796000933!5m2!1sen!2scm"
+                            width="600" height="450" style="border:0;"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="crime">
+                <div class="contactMethod">
+                    <div class="method">
+                        <img src="icons8-location.gif" class="contactIcon" alt="Location icon" height="35px">
+                        <article class="text">
+                            <h1>Location</h1>
+                            <p>38MX + JHX, Tiko, Cameroon</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="contactMethod">
+                    <div class="method">
+                        <img src="mail_7285727.png" class="contactIcon" alt="Email" height="35px">
+                        <article class="text">
+                            <h1>Email</h1>
+                            <p>blaisenology@gmail.com</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="contactMethod">
+                    <div class="method">
+                        <img src="telephone_16455938.png" class="contactIcon" alt="phone-icon" height="35px">
+                        <article class="text">
+                            <h1>Phone</h1>
+                            <p style="color: orangred;">+237 679 700 287</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--
+    <video controls>
+        <source src="hanza.mp4" type="video/mp4">
+        <track src="video.vtt" kind="subtitles" srclang="en" default></track>
+        [Your browser Doesn't Spport this File format]
+    </video>
+-->
+    <script>
+        (function () {
+            const dlog = document.getElementById('dlog')
+            const info = document.getElementById('info')
+            const show = document.getElementById('show')
+            const cncl = document.getElementById('cncl')
+            const conf = document.getElementById('conf')
+
+            show.addEventListener( 'click', function () {
+                dlog.showModal() 
+                info.innerText = 'WE Love Your Feedback'
+            })
+            cncl.addEventListener( 'click', function () {
+                dlog.close()
+                info.innerText = 'Thanks Very Much, For Appreciating Our Efforts'
+            })
+            conf.addEventListener( 'click', function () {
+                dlog.close()
+                info.innerText = 'Oops...Thanks. Did We Offend you? Please Explain More in the Contact Form'
+            })
+
+        }) ()
+
+        ( function () {
+            const ctx = document.getElementById('canvas').getContext('2d')
+            ctx.lineWidth = 2
+            ctx.font = '3em Fantasy'
+
+            ctx.fillstyle = 'Darkblue'
+            ctx.fillRect = (0, 0, 500, 150)
+            ctx.strokeStyle = 'Pink'
+            ctx.strokeRect = (0, 0, 500, 150)
+
+            ctx.fillstyle = 'Orangered'
+            ctx.filltext = ('CONTACT US', 30, 100)
+            ctx.strokeStyle = 'White'
+            ctx.strokeText = ('CONTACT US', 30, 100)
+
+        }) ()
+    </script>
+</body>
+
+</html>
