@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    overflow-x: visible;
+}
+
+body {
+    width: 95%;
+    height: 7vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(0, 255, 213), rgb(0, 0, 0));
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.logo span {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.hamburger,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    transform: 0.3s linear;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 0, 157);
+    transition: 0.2 linear;
+    font-weight: bolder;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+
+}
+
+.nav-container .contact-btn {
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(25, 0, 255);
+    transition: 0.5s linear;
+}
+
+.nav-container .contact-btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-container .contact-btn a {
+    color: rgb(0, 255, 128);
+}
+
+.nav-container .links a:hover {
+    color: rgb(0, 255, 170);
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px solid black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    color: rgb(255, 0, 200);
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: rgb(223, 85, 31);
+}
+
+section {
+    width: 95%;
+    height: 100vh;
+}
+
+.main-container {
+    width: 90%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.main-container .image {
+    z-index: -1;
+    width: 40%;
+}
+
+.main-container .image img {
+    width: 80%;
+}
+
+.main-container .content {
+    color: black;
+    width: 45%;
+    min-height: 5em;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+    color: rgb(0, 0, 0);
+}
+
+.content h1 span {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(0, 255, 157);
+}
+
+.content .typewriter {
+    font-weight: 800;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+
+.content .typewriter span {
+    color: rgb(0, 255, 157);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(8, 75, 218);
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.typewriter span::before {
+    content: "Developer";
+    animation: words 15s infinite;
+}
+
+.typewriter span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 60%;
+    border-left: 3px solid rgb(228, 225, 225);
+    animation: cursor 0.6s linear infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid rgb(0, 247, 152);
+    }
+}
+
+@keyframes words {
+
+    0%,
+    33% {
+        content: "Software Developer"
+    }
+
+    34%,
+    66% {
+        content: "liscenced IT Expert"
+    }
+
+    70%,
+    100% {
+        content: "Penetration Tester"
+    }
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem, +9vw, 1rem);
+    margin: 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.social-links img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(109, 67, 0);
+    border-radius: 50%;
+    color: rgb(109, 67, 0);
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links img:hover {
+    scale: 1.3;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 10px rgb(3, 223, 157));
+}
+
+.content button {
+    width: 80%;
+    height: 6vh;
+    margin: 30px;
+    background: rgb(5, 230, 136);
+    border: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: rgb(240, 233, 233);
+    border: 2px solid rgb(17, 0, 255);
+    background: rgb(22, 22, 22);
+    font-weight: 700;
+    box-shadow: 0 0 40px rgb(4, 250, 217);
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(255, 246, 253);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(170, 3, 170);
+}
+
+.content button {
+    width: clamp(150px, 80%, 300px);
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+@media screen and (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .content button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:884px) {
+    body {
+        overflow-y: visible;
+    }
+
+    nav .logo {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburger,
+    .cancel {
+        display: block;
+        background: white;
+    }
+
+    .main-container .content {
+        width: 30%;
+    }
+
+    .social-links img {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image {
+        width: 10%;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+        
+    }
+
+

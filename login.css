@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+     background: rgb(14, 0, 88);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 7%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: black;
+}
+.navbar a {
+    position: relative;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-right: 30px;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 223, 11);
+    border-radius: 10em;
+    transform: translateY(10px);
+    transition: .5s linear;
+}
+.navbar a:hover::after {
+    transform: translateY(0);
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 140vh;
+    display: flex;
+}
+section .imgBx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .imgBx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,rgba(1, 106, 124, 0.973),rgb(0, 19, 124));
+    z-index: 100;
+    mix-blend-mode: screen;
+}
+section .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contentBx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: 100%;
+    transform: transateY(8%);
+    background: rgb(255, 255, 255);
+}
+section .contentBx .formBx {
+    width: 50%;
+}
+section .contentBx .formBx h2 {
+    color: rgb(195, 0, 255);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border-bottom: .1rem solid rgb(0, 14, 95);
+    text-align: center;
+    letter-spacing: .2rem;
+    margin-top: 4rem;
+}
+section .contentBx .formBx .inputBx{
+    margin-bottom: 1.5rem;
+}
+section .contentBx .formBx .inputBx span {
+    font-size: 1.9rem;
+    margin-bottom: .1rem;
+    display: inline-block;
+    color: rgb(0, 2, 102);
+    font-weight: 900;
+    letter-spacing: .3rem;
+}
+section .contentBx .formBx .inputBx input {
+    width: 100%;
+    padding: 1.8rem 1rem;
+    outline: none;
+    font-weight: 400;
+    border: .1rem solod teal;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    color: rgb(1, 2, 68);
+    background: transparent;
+    color: darkblue;
+    font-family: cursive;
+    border-radius: 30px;
+    height: 2vh;
+}
+section .contentBx .formBx .inputBx input::placeholder {
+    color: rgb(0, 0, 0);
+}
+section .contentBx .formBx .inputBx input[type="submit"] {
+    background: rgb(0, 211, 0);
+    color: rgb(5, 0, 71);
+    outline: none;
+    border: 2px solid rgb(255, 0, 242);font-weight: 500;
+    cursor: pointer;
+    margin-top: .7rem;
+    padding: 1.3rem 1rem;
+    line-height: 0;
+}
+section .contentBx .formBx .inputBx input[type="submit"]:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(0, 156, 156);
+    border: 2px solid rgb(210, 0, 238);
+    font-size: 1.1rem;
+}
+.remember {
+    margin-bottom: .09999rem;
+    color: rgb(174, 0, 255);font-weight: 400;
+    font-size: 1.3rem;
+}
+.inputBx p {
+    color: rgb(172, 146, 60);
+}
+.inputBx a {
+    color: rgb(43, 255, 0);
+}
+.formBx h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 1.1rem 0 .1rem;
+    font-weight: 500;
+}
+.nonsense {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media (max-width:778px) {
+    section .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    }
+    section .contentBx {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBx .formBx {
+        width: 100%;
+        padding: 40px;
+        background: rgba(225 255 255 / 0.5);
+        margin: 50px;
+    }
+    ::-webkit-keygen-select {
+        stroke-width: 85%;
+        height: 3em;
+    }

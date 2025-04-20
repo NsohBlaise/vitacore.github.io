@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nsoh Blaise - Portfolio&#x1F4A1;</title>
+    <link rel="stylesheet" href="portfolio-style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Nsoh Blaise</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="home.html">Home</a></div>
+                <div class="link"><a href="about.html">About</a></div>
+                <div class="link"><a href="contact.html">Contact</a></div>
+                <div class="link"><a href="portfolio.html">Portfolio</a></div>
+                <div class="link"><a href="bog.html">Community Blog</a></div>
+                <div class="link contact-btn"><a href="mailto:blaisenology@gmail.com">Email Me</a></div>
+            </div>
+            <img src="icons8-menu-30.png" height="25" class="hamburger">
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="community.html">Community</a>
+                <img src="icons8-x-20.png" class="cancel">
+            </div>
+        </div>
+    </nav>
+    <ection>
+        <div class="main-container">
+            <div class="image">
+                <img src="dada.avif" height="500" width="200">
+            </div>
+            <div class="content">
+                <h1>Hey I'm <span>Blaise</span></h1>
+                <p>A Master of the Modern Frontend Realm With a sharp mind, my craft refined, An intellectual force, one
+                    of a kind. Through frameworks sleek and libraries vast, I build the future, outpacing the past.
+                    Responsive magic in every design, Seamless experiences—crafted divine. Modern skills, with trends
+                    aligned, In the world of frontend, I'm defined.
+                    From pixel-perfect visions to code that thrills, I shape the web with cutting-edge skills. A
+                    developer's art, both bold and wise, I rise to challenges, I modernize
+                </p>
+                <div class="typewriter">I'm a <br><span></span></div>
+                <div class="social-links">
+                    <a href="https://github.com"><img src="icons8-github-30.png"></a>
+                    <a href="https://facebook.com"><img src="icons8-facebook-logo-30.png"></a>
+                    <a href="https://linkedin"><img src="icons8-linkedin-30.png"></a>
+                    <a href="https://twitter.com"><img src="icons8-twitter-30.png"></a>
+                    <a href="https://instagram.com"><img src="icons8-instagram.gif" height="30"></a>
+                </div>
+                <div class="btn">
+                    <a href="skills.html"><button>My Skills</button></a>
+                    <a href="blog.html"><button>My Blog</button></a>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!--
+        <script>
+            function hamburger() {
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+                const hamburgerButton = document.querySelector(".hamburger")
+                hamburgerButton.addEventListener("click", hamburger);
+            }
+        </script>
+    -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const hamburgerButton = document.querySelector(".hamburger");
+                const cancelButton = document.querySelector(".cancel");
+                const navbar = document.querySelector(".dropdown");
+        
+                
+                hamburgerButton.addEventListener("click", () => {
+                    navbar.style.transform = "translateY(0px)";
+                });
+        
+                
+                cancelButton.addEventListener("click", () => {
+                    navbar.style.transform = "translateY(-500px)";
+                });
+            });
+        </script>
+        
+</body>
+
+</html>

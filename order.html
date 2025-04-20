@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order a Website - VitaCore&#x1F4A1;</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <img class="logo" src="logs.jpg" alt="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href=""><button>Join Us Now</button></a>
+            <a class="cta" href=""><button>Book a Course</button></a>
+        </header>
+        <div class="content">
+            <div class="textBx">
+                <h2>It's Not Just Websites...<br> It's <span>Blaise Tech Robust Dynamic Sites</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus similique vitae omnis eius ab
+                    praesentium laudantium cumque iusto a ipsam qui odio laboriosam nulla commodi, mollitia dicta natus.
+                    Aut, repellendus!
+                </p>
+                <button type="button" class="nanny">ENGAGE</button>
+                <button type="button" class="nanny">See Skills</button>
+            </div>
+            <div class="imgBx">
+                <img src="strars1.jpg" class="starbucks next" height="300"
+                    style="color: aqua; background: rgb(0, 255, 13); border-radius: 50%;">
+            </div>
+
+            <!--<div class="slide">
+            <ul class="thumb">
+                <li><img class="item" src="strars1.jpg" height="100" alt="" onclick="imgSlider(strars1.jpg)"></li>
+                <li><img class="item" src="backer1.avif" height="100" alt="" onclick="imgSlider(backer1.avif)"></li>
+                <li><img class="item" src="dada.avif" height="100" alt="" onclick="imgSlider(img3)"></li>
+            </ul>
+        </div>
+    
+        <div class="button">
+            <button class="prev" title="previous"><<</button>
+            <button class="next" title="next">>></button>
+        </div>
+    -->
+            <ul class="sci">
+                <li><a href=""><img src="icons8-linkedin-30.png" height="50"></a></li>
+                <li><a href=""><img src="icons8-twitter-30.png" height="50"></a></li>
+                <li><a href=""><img src="icons8-github-30.png" height="50"></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="form" id="form">
+        <h1>Want To Order A Website?</h1>
+        <h3>Fill The Boxes Below</h3>
+        <p>This will help Us Better understand How You Want The Web Browser To Mark up The Sections Of Your Website</p>
+        <form action="http://localhost/echo.py" method="post" enctype="multipart/form-data">
+            <dl>
+                <dt>Your Full Name:</dt>
+                <dd><input type="text" name="Name" placeholder="Your Full Name"></dd>
+                <dt>Create Password:</dt>
+                <dd><input type="password" name="pwd" placeholder="Create A Password"></dd>
+                <dt>Email:</dt>
+                <dd><input type="email" name="email" placeholder="Enter Your Valid Email address"></dd>
+                <dt>Phone:</dt>
+                <dd><input type="tel" name="email" placeholder="Enter Your Personal Phone Nmber"></dd>
+                <dt>URL:</dt>
+                <dd><input type="url" name="url" placeholder="URL of a similar website For reference " required></dd>
+                <dt> Secondary Color:</dt>
+                <dd><input type="color" name="scol" placeholder="Which color should be the Main"></dd>
+                <dt>Primary Color:</dt>
+                <dd><input type="color" name="pcol" placeholder="Which color shold be Minor"></dd>
+                <dt>Date:</dt>
+                <dd><input type="datetime-local" name="date" placeholder=" latest date yo want your website Hosted"></dd>
+                <dt>Range:</dt>
+                <dd><input type="range" name="range" placeholder="Estimated Range Of Features" required></dd>
+                <dt>Number of Pages:</dt>
+                <dd><input type="number" name="pwd" placeholder="Estimated Range of Pages required"></dd>
+                <dt>Zip Code:</dt>
+                <dd><input type="text" name="ZIP" size="5" maxlength="5" placeholder="The ZIP Code"></dd>
+                <dt>Folder:</dt>
+                <dd><input type="file" name="url" placeholder="Folder of Media contents you Want used" required></dd>
+                <textarea name="Descriptions" rows="9" cols="70" placeholder="Enter other Descriptions (*)" required>
+                </textarea>
+            </dl>
+           
+            <h2>What Can we Send To You</h2>
+            <p>
+                Send Details
+                <input type="checkbox" name="Send" value="Details">
+                Payment Terms
+                <input type="checkbox" name="Send" value="TerDetails">
+                Pricing Details 
+                <input type="checkbox" name="Send" value="PDetails">
+                Technical details 
+                <input type="checkbox" name="Send" value="TDetails">
+                Payment Methods
+                <input type="checkbox" name="Send" value="PayMeth">
+                Warranty & Liability 
+                <input type="checkbox" name="Send" value="Warranty & Liability">
+            </p>
+            <fieldset>
+                <legend>How Wold Yo Prefer To be Contacted</legend>
+                Email <input type="radio" 
+                                          name="Contact Method" value="email"> <br>
+                Phone <input type="radio" 
+                                          name="Contact Method" value="Phone"> <br>
+            </fieldset>
+            <input type="submit" name="form" value="sender">
+            <br>
+        </form>
+        <img src="hoistx.jpg" alt="sale pic" width="200" height="120">
+        <form action="http://localhost/echo.py" method="get" oninput="sum.value=multiply(qty, price)">
+            <input type="submit" name="Offer" value="Purchase Hossting Service">
+            <br> 
+            Page Numbers(Max=20) <input type="number" id="qty" name="Quantity" min="1" max="20">
+            <input type="hidden" name="Unit Price" id="price" value="30.56">
+            <output name="sum" for="qty price"></output> <br>
+        </form>
+    </section>
+    <script src="order.js">
+
+    </script>
+</body>
+
+</html>
